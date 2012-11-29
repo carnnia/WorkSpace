@@ -1,0 +1,58 @@
+import java.util.Scanner;
+/*
+Name:		Casey Carnnia
+Date: 		10.22.2012
+Scope:		Problem 1: Write a program that reads a set of floating-point values. Ask the user to enter the values, then print:
+		    The average of the values
+		    The smallest of the values
+		    The largest of the values
+		    The range, that is the difference between the smallest and the largest Of course, you may only prompt for the values once.
+
+
+Solution: 	prompt the user for input. 
+ 			**Important**
+ 				the problem says a set of numbers so we don't need to program for a variable set. we can say a set of 5, or 10.
+			read the user inputs in a loop
+			 
+									
+				
+				
+*/
+ 
+// declare class
+public class AveragesLoops{
+	//declare the main method
+	public static void main(String[] args) {
+		 
+		// welcome the user
+		System.out.println("I can calculate the average of a bunch of numbers and also tel you the larges and the smalles of the numbers and their range.");
+		// get ready to read the user data
+		Scanner keyboard = new Scanner(System.in);
+		// prompt the user for input
+		// store the user input
+		System.out.print("Please enter a set of 5 numbers seperated by blank space. It is OK to use fractions:");
+		double[] inputArray;
+		inputArray = new double[5];
+		int inputCounter = 0;
+		 
+		while (inputCounter < 5){
+			inputArray[inputCounter] =  keyboard.nextDouble();	
+			inputCounter ++;
+		}//input loop END 
+		
+		int averageCounter = 0;
+		double sum = 0;
+		while (averageCounter < 5){
+			sum = sum + inputArray[averageCounter];
+			averageCounter ++;
+		}
+		double averageOutput = sum / inputArray.length; 
+		System.out.println("The average if the numbers you entered is: " + averageOutput);
+		 
+		
+		  
+  
+	}//main END
+}//class END
+
+ 

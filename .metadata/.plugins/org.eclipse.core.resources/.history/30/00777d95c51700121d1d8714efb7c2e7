@@ -1,0 +1,133 @@
+/*
+Name:		Casey Carnnia
+Date: 		10.09.2012
+Scope:		Problem 1:
+			Write a program that would display the following:
+										
+			*    *    *    *    *    *    *    *    *    *
+			*    *    *    *    *    *    *    *    *
+			.
+			.
+			.
+			*    *    *
+			*    *
+			*
+			
+			Modify the previous program to display the following:
+			*    *     *    *     *    *    *    *     *    *
+			*          *           *         *           *
+			*          *           *         *
+			*          *           *
+			*          *
+			*
+			
+			Problem 2:
+			Display the following table
+			
+			1          2      6         24   
+			2          6    24       120   
+			6        24    20        840
+			24    120    840    7560
+
+Solution: 	Problem 1 (part1): Implement a loop that goes from 10 to 0
+									Implement a loop that goes from (current value of outterloop's counter) to 0
+									and in each iteration print a line of that many "+\t" without a line brake
+						and in each iteration it prints a line brake
+						
+			Problem 1 (part2): Implement a loop that goes from 10 to 0
+									Implement a loop that goes from [ (current value of outterLoop's counter) - 5 ] to 0
+									and in each iteration print a line of that many "+\t\t" without a line brake
+						and in each iteration it prints a line brake 
+			 
+									
+				
+				
+*/
+ 
+// declare class
+public class Exercise2Loops{
+	//declare the main method
+	public static void main(String[] args) {
+		 //problem 1.1 using a while loop
+		 int x = 0;
+		 while( x < 10 ){
+			 int y = x;
+			 while( y > 0 ){
+				 System.out.print("*\t" );
+		         y--;
+			 }//Inner while loop END
+			 System.out.print("\n");
+		         x++;
+		}//Border while loop END
+		
+		System.out.println("Nice bet nor correct, try again Casey.");
+		
+		//problem 1.1 using a while loop
+		 int outterCounter = 10;
+		 while( outterCounter > 0 ){
+			 int innerCounter = outterCounter;
+			 while( innerCounter < 10 ){
+				 System.out.print("*\t" );
+		         innerCounter++;
+			 }//Inner while loop END
+			 System.out.print("\n");
+			 outterCounter--;
+		}//Border while loop END
+		
+		 System.out.println("Still not correct, try again Casey.");
+		 
+		//problem 1.1 using a while loop
+		 int outterLoop = 10;
+		 while (outterLoop > 0){
+			 int innerLoop = outterLoop;
+			 while( innerLoop > 0 ){
+				 System.out.print("*\t" );
+		         innerLoop--;
+			 }//Inner while loop END
+			 
+			 System.out.print("\n");
+			 outterLoop--;
+		 }//outter while loop END
+		
+		 System.out.println("OK you got it Casey. Now do it with FOR loop.");
+		 
+		//problem 1.1 using a for loop
+		 int outCounter, inCounter;
+		 for (outCounter = 10; outCounter > 0; outCounter--){
+			 for(inCounter = outCounter; inCounter > 0; inCounter--){
+				 System.out.print("*\t" );
+			 }//inner forloop END
+			 System.out.print("\n");
+		 }//outter forloop END
+		  
+		 System.out.println("OK you got it Casey. Go to part 2 of problem 1.");
+		 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		 
+		//problem 1.2 using a for loop
+		 int out2Counter = 0, in2Counter;
+		 for (out2Counter = 10; out2Counter > 0; out2Counter--){
+			 if (outCounter == 10){
+				 for(in2Counter = outCounter; in2Counter > 0; in2Counter--){
+					 System.out.print("*\t" );
+				 }//inner forloop IF leg END
+				 System.out.print("\n");
+			 }
+			 else{
+				 for(in2Counter = out2Counter - 5; in2Counter > 0; in2Counter--){
+					 System.out.print("*\t\t");
+				 }//inner forloop else leg END	 
+			 }//if END
+			
+			 System.out.print("\n");
+		 }//outter forloop END
+		  
+		 System.out.println("OK you got it Casey. Go to part ^^^^^^ of problem 1.");
+ 
+ 
+		
+		  
+  
+	}//main END
+}//class END
+
+ 

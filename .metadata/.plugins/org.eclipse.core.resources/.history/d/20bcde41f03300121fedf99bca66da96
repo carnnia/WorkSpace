@@ -1,0 +1,36 @@
+/*
+Name:  Casey Carnnia
+Date:  012.13.2012
+Scope: Write a program to test your class definition: HangMan
+*/
+
+public class hangManDemo
+{
+	//- declare the main method
+	public static void main (String[] args)
+	{
+	HangMan myGame = new HangMan();
+	
+	System.out.println("let's bigin the game  ");
+	myGame.newGame();
+	
+	if (myGame.startFlag == 0)
+	{
+		//clear the screen
+		for (int y = 0; y < 30; y++)
+		{
+			System.out.println("*** Game is about to start ***");
+		}//for END
+		
+		System.out.println("Player 2 your secret word is " + myGame.disguised.length() + " letters long. One ? for each letter: " + myGame.disguised   );
+		System.out.println("You have " + myGame.limit + " chances to guess the word.");
+		System.out.println("Counter is set to " + myGame.guessCount);
+		System.out.println("*** READY ~~~ SET ~~~ GO ***");
+		
+	}
+	
+	
+	
+	 
+	}//main END
+}//class END

@@ -1,0 +1,82 @@
+/*
+Name:     Casey Carnnia
+Date:     10.09.2012
+Scope:    Suppose your cell phone carrier charges you $29.95 for up to 300 minutes of calls, 
+		  and $0.45 for each additional minute, plus 12.5 percent taxes and fees.
+		  Give an algorithm to compute the monthly charge from a given number of minutes.
+Solution: 	welcome the user
+			set constant basicPrice = 29.95 type = float
+			set constant planMinutes = 300 type = int
+			set constant extraMinutesFee = 0.45 type = float
+			set constant taxFees = 12.5 / 100 type = double
+			ask the user to input numberOfMinutes type = int
+			set variable totalCost type = double 
+			total cost = ( basicPrice + ( (numberOfMinutes - planMinutes) . extraMinutesFee )) . taxFees
+			out put the detail report
+			 
+			
+			if 1
+				get sell value of one yen in dollars yenSellValue = double
+				get   transactionAmount type = double 
+				multiply transaction amount by selling value of yen
+				print out the answer  
+			if 2 
+				get buy value of one yen in dollars yenBuyValue double
+				get  transactionAmount type = double 
+				multiply transaction amount by yenBuyValue value of yen
+				print out the answer
+			if 3
+				exit
+*/
+// import needed package
+import java.util.Scanner;
+// declare class
+public class cellPhoneCalculator{
+    //declare the main method
+    public static void main(String[] args) {
+        // welcome the user
+        System.out.println("I can exchange yen to dollar. ");
+       
+        // get ready to read the user data
+        Scanner keyboard = new Scanner(System.in);
+        // prompt the user for a buy/sell option
+        System.out.println("Do you  want to sell or buy YEN [1 = sell , 2 = buy , 0 = Exit ] ");
+        // store the user input
+        int inputOption = keyboard.nextInt();
+        // basic if logic       
+        if (inputOption == 1) {
+            System.out.println("giving YEN to get DOLLAR");
+            System.out.println("What is the selling price of Yen against Dollars today? ");
+            double yenSellValue = keyboard.nextDouble();
+            System.out.println("How many YEN  do you want to sell? ");
+            double transactionAmmount = keyboard.nextDouble();
+            double answer = yenSellValue * transactionAmmount;
+            System.out.printf("With YEN at $%5.2f ==> you will get $%10.2f for %10.2f YEN.", yenSellValue, answer, transactionAmmount);
+               
+        }
+        else if (inputOption == 2){
+            System.out.println("giving DOLLAR to get YEN");
+            System.out.println("What is the buying price of Yen against Dollar today? ");
+            double yenBuyValue = keyboard.nextDouble();
+            System.out.println("How many YEN  do you want to buy? ");
+            double transactionAmmount = keyboard.nextDouble();
+            double answer = yenBuyValue * transactionAmmount;
+            System.out.printf("With YEN at $%5.2f ==> it will cost you $%10.2f  for %10.2f YEN.", yenBuyValue, answer, transactionAmmount);
+           
+       
+           
+            }
+        else if (inputOption == 0){
+            System.out.println("You exited the program.");        
+           
+            }
+        else {
+            System.out.println("You entered an invalid value.");        
+           
+            }//if END
+ 
+ 
+    }//main END
+}//class END
+
+ 

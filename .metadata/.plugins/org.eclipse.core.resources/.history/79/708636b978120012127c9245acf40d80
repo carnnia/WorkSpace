@@ -1,0 +1,47 @@
+/*
+Name:     	Casey Carnnia
+Date:    	10.09.2012
+Scope:   	Write pseudocode for a program that prompts the user for a month and day and prints out whether it is one of the following four holidays: 
+ 			•  	New Year's Day (January 1)
+ 			•  	Independence Day (July 4)
+ 			•  	Veterans Day (November 11)
+ 			•  	Christmas Day (December 25)
+Solution:   welcome the user 
+			ask the user to input a month NAME
+			store it in a constant INPUT_MONTH type = String
+			ask a user to input a day 
+			store it in a constant INPUT_DAY type = int
+			if INPUT_MONTH equalsIgnoreCase("January") and INPUT_DAY = 1
+				output "Happy New Year"
+			else if INPUT_MONTH equalsIgnoreCase("July") and INPUT_DAY = 4
+				output "Happy Independence Day"
+			else if INPUT_MONTH equalsIgnoreCase("November ") and INPUT_DAY = 11
+				output "Happy Veterans Day"
+			else if INPUT_MONTH equalsIgnoreCase("December") and INPUT_DAY = 25
+				output "Happy Christmas "
+			else 
+				output "Sorry, not a holiday"
+				
+ 
+*/
+ 
+// declare class
+public class holidays{
+    //declare the main method
+    public static void main(String[] args) {
+	 
+	  
+	System.out.println("+--+--+--+");
+	System.out.println("|  |  |  |");			 
+	System.out.println("+--+--+--+");
+	System.out.println("|  |  |  |");	
+	System.out.println("+--+--+--+");
+	System.out.println("|  |  |  |");	
+	System.out.println("+--+--+--+"); 
+	 
+ 
+ 
+    }//main END
+}//class END
+
+ 
